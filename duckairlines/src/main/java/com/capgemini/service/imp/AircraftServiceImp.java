@@ -28,7 +28,7 @@ public class AircraftServiceImp implements AircraftService{
 
 	@Override
 	public void delete(Integer aircraft_id) {
-		aircraftDao.delete(aircraft_id);
+		aircraftDao.deleteById(aircraft_id);
 	}
 
 	@Override
