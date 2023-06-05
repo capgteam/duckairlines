@@ -1,6 +1,7 @@
-FROM maven
-VOLUME /tmp
-ADD target/duckairlines-0.1.0.jar app.jar
-RUN sh -c 'touch /app.jar'
-ENV JAVA_OPTS=""
-ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.jar" ]
+FROM maven:3.8.2-jdk-8
+
+WORKDIR /duckairlines
+COPY . .
+RUN mvn clean install
+
+CMD mvn spring-boot:run
