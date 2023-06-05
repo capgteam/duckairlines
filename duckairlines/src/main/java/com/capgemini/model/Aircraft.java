@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
+
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
@@ -37,7 +37,7 @@ public class Aircraft{
 		private Integer max_range_speed;
 		private Integer norm_cruise_speed;
 		
-		@NotNull
+		
 		private Integer aircraft_range;
 		private Integer rate_of_climb;
 		private Integer service_ceiling;
